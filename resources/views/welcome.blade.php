@@ -70,10 +70,21 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('login') }}">
+                          @if(Lang::has('welcome.login'))
+                            @lang('welcome.login')
+                          @else
+                            Login
+                          @endif
+                        </a>
 
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                            <a href="{{ route('register') }}">
+                              @if(Lang::has('welcome.login'))
+                                @lang('welcome.register')</a>
+                              @else
+                                Register
+                              @endif
                         @endif
                     @endauth
                 </div>
@@ -85,9 +96,14 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="https://laravel.com/docs">@if (Lang::has('welcome.documentation'))
+                        @lang('welcome.documentation')
+                      @else
+                        Documentation
+                      @endif
+                    </a>
                     <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
+                    <a href="https://laravel-news.com">@lang('welcome.news')</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
