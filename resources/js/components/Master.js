@@ -15,9 +15,9 @@ class Master extends Component {
             <div className="card-body">
               <div className="navbar navbar-expand-md navbar-light navbar-laravel">
                 <ul className="navbar-nav">
-                  <li className="nav-item"><Link to="/home" className="nav-link">Home</Link></li>
-                  <li className="nav-item"><Link to="add-item" className="nav-link">Create Product</Link></li>
-                  <li className="nav-item"><Link to="display-item" className="nav-link">Products</Link></li>
+                  <li key={1} className="nav-item"><Link to="/home" className="nav-link">Home</Link></li>
+                  <li key={2} className="nav-item"><Link to="add-item" className="nav-link">Create Product</Link></li>
+                  <li key={3} className="nav-item"><Link to="display-item" className="nav-link">Products</Link></li>
                 </ul>
               </div>
             </div>

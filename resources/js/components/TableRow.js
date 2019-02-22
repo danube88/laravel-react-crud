@@ -18,7 +18,8 @@ class TableRow extends Component {
     return (
         <tr>
           <td>
-            {this.props.obj.id}
+            {this.props.obj.id};
+            console.log(this.props.obj.id);
           </td>
           <td>
             {this.props.obj.title}

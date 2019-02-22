@@ -68557,7 +68557,9 @@ function (_Component) {
     value: function tabRow() {
       if (this.state.products instanceof Array) {
         return this.state.products.map(function (object, i) {
-          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
+          return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", {
+            key: object.id
+          }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, object.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", {
             width: "200px"
           }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_2__["Link"], {
             to: "edit/" + object.id,
@@ -68654,16 +68656,19 @@ function (_Component) {
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
         className: "navbar-nav"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        key: 1,
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "/home",
         className: "nav-link"
       }, "Home")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        key: 2,
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "add-item",
         className: "nav-link"
       }, "Create Product")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        key: 3,
         className: "nav-item"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "display-item",
@@ -68763,7 +68768,7 @@ function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.obj.id), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.obj.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.obj.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("tr", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.obj.id, "; console.log(this.props.obj.id);"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.obj.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, this.props.obj.body), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("td", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router__WEBPACK_IMPORTED_MODULE_1__["Link"], {
         to: "edit/" + this.props.obj.id,

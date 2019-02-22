@@ -21,11 +21,11 @@ class DisplayProduct extends Component {
        if(this.state.products instanceof Array){
          return this.state.products.map(function(object, i){
              return (
-               <tr>
-                    <td>{ object.id }</td>
-                    <td>{ object.title }</td>
-                    <td>{ object.body }</td>
-                    <td width="200px">
+               <tr key={object.id}>
+                   <td>{ object.id }</td>
+                   <td>{ object.title }</td>
+                   <td>{ object.body }</td>
+                   <td width="200px">
                       <Link to={"edit/"+object.id} className="btn btn-primary">Edit</Link>
                       <input type="submit" value="Delete" className="btn btn-danger"/>
                    </td>
